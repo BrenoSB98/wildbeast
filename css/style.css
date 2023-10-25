@@ -17,9 +17,10 @@ a {
 li {
   list-style: none;
 }
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
+
 /* Grid Geral */
 .container {
   display: grid;
@@ -29,9 +30,7 @@ img{
     "sidenav main-content ad"
     "footer footer footer";
 }
-.menu {
-  grid-area: menu;
-}
+
 .sidenav {
   grid-area: sidenav;
 }
@@ -43,4 +42,37 @@ img{
 }
 .footer {
   grid-area: footer;
+}
+
+/* Menu */
+.menu {
+  grid-area: menu;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+.menu li + li {
+  margin-left: 20px;
+}
+.menu-logo {
+  max-width: 200px;
+}
+.menu-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-nav a {
+  display: block;
+  padding: 10px 15px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transition: 0.1s;
+}
+.menu-nav a:hover {
+  background: #ffffff;
+  color: #8844ee;
 }
