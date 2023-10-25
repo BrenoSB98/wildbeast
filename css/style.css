@@ -19,6 +19,8 @@ li {
 }
 img {
   max-width: 100%;
+  display: block;
+  border-radius: 6px;
 }
 
 /* Grid Geral */
@@ -32,12 +34,6 @@ img {
 }
 .main-content {
   grid-area: main-content;
-}
-.ad {
-  grid-area: ad;
-}
-.footer {
-  grid-area: footer;
 }
 
 /* Menu */
@@ -92,4 +88,27 @@ img {
 }
 .icon:hover {
   background: #b07dfb;
+}
+
+/* Ad */
+.ad {
+  grid-area: ad;
+  background: #fafbfc;
+  display: grid;
+  align-content: start;
+  padding: 30px;
+  gap: 30px;
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.footer p {
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.25rem;
 }
