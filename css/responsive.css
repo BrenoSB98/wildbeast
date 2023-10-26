@@ -1,0 +1,73 @@
+@media (max-width: 1200px) {
+  .container {
+    grid-template-areas:
+      "menu menu menu"
+      "sidenav main-content main-content"
+      "sidenav ad ad"
+      "footer footer footer";
+  }
+}
+
+@keyframes seta {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "menu"
+      "sidenav"
+      "main-content"
+      "ad"
+      "footer";
+  }
+  .menu {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  .menu-logo {
+    margin-bottom: 30px;
+    justify-self: center;
+  }
+  .menu-nav a {
+    font-size: 1rem;
+  }
+  .menu li + li {
+    margin-left: 10px;
+  }
+  .sidenav ul {
+    display: flex;
+  }
+  .sidenav ul il {
+    flex: 1 0 60px;
+  }
+  .sidenav {
+    position: relative;
+    padding: 0 30px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .sidenav::after {
+    content: "→";
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: #0000004d;
+    animation: seta 0.5s ease-in 0s infinite alternate;
+  }
+  .icon {
+    margin: 30px 30px 30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    grid-template-columns: auto;
+  }
+}
